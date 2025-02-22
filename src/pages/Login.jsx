@@ -17,7 +17,7 @@ const Login = () => {
           timer: 1500
         });
         setUser(result.user);
-        // navigate(location?.state? location.state : '/');
+        navigate(location?.state? location.state : '/task-board');
       })
       .catch((error) => {
         const errorCode = error.code;

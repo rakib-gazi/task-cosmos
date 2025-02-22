@@ -1,5 +1,4 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
@@ -12,7 +11,6 @@ const Navbar = () => {
     LogOutUser()
       .then(() => {
         setUser(null);
-
         navigate("/");
         Swal.fire({
           position: "center",
@@ -34,100 +32,7 @@ const Navbar = () => {
       });
   };
   const links = [
-    <NavLink
-      to="/"
-      className={({ isActive }) =>
-        isActive
-          ? `bg-active hover:bg-active font-bold px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 rounded ${
-              darkTheme ? "text-black" : ""
-            }`
-          : "bg-none text-white font-medium px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 rounded"
-      }
-    >
-      Home
-    </NavLink>,
-    <NavLink
-      to="/all-volunteer-need-posts"
-      className={({ isActive }) =>
-        isActive
-          ? `bg-active font-bold hover:bg-active px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 rounded ${
-              darkTheme ? "text-black" : ""
-            }`
-          : "bg-none text-white font-medium px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 rounded"
-      }
-    >
-      All volunteer Need posts
-    </NavLink>,
-    <NavLink
-      to="/city-wise-activities"
-      className={({ isActive }) =>
-        isActive
-          ? `bg-active font-bold hover:bg-active px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 rounded ${
-              darkTheme ? "text-black" : ""
-            }`
-          : "bg-none text-white font-medium px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 rounded"
-      }
-    >
-      City Wise Activities
-    </NavLink>,
-    user && (
-      <NavLink
-        to={`/manage-my-post`}
-        className={({ isActive }) =>
-          isActive
-            ? `bg-active font-bold hover:bg-active px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 rounded ${
-                darkTheme ? "text-black" : ""
-              }`
-            : "bg-none text-white font-medium px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 rounded"
-        }
-      >
-        My Posts
-      </NavLink>
-    ),
-    user && (
-      <div className="dropdown">
-        <div
-          tabIndex={0}
-          role="button"
-          className=" bg-none text-white font-medium px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 rounded hover:bg-active hover:text-nav"
-        >
-          My Profile
-        </div>
-        <ul
-          tabIndex={0}
-          className="dropdown-content menu bg-footer rounded-box z-50 w-72 p-2 shadow mt-32 lg:mt-2"
-        >
-          {user && (
-            <NavLink
-              to={`/addVolunteer`}
-              className={({ isActive }) =>
-                isActive
-                  ? `bg-active font-bold hover:bg-active px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 rounded ${
-                      darkTheme ? "text-black" : ""
-                    }`
-                  : "bg-none text-nav font-medium px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2  hover:bg-nav hover:text-white hover:rounded-2xl"
-              }
-            >
-              Add volunteer need post
-            </NavLink>
-          )}
-          {user && (
-            <NavLink
-              to={`/manage-my-post`}
-              className={({ isActive }) =>
-                isActive
-                  ? `bg-active font-bold hover:bg-active px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 rounded ${
-                      darkTheme ? "text-black" : ""
-                    }`
-                  : "bg-none text-nav font-medium px-6 lg:px-2 xl:px-6 py-2 lg:py-1 xl:py-2 hover:bg-nav hover:text-white hover:rounded-2xl"
-              }
-            >
-              Manage My Posts
-            </NavLink>
-          )}
-        </ul>
-      </div>
-    ),
+    
   ];
   return (
     <>
@@ -171,7 +76,7 @@ const Navbar = () => {
                   </ul>
                 </div>
                 <Link className=" text-xl">
-                  <img src={logo} alt="Voluntry" className="h-8 md:h-8" />
+                  <h1 className="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-bold text-white">Task Cosmos</h1>
                 </Link>
               </div>
               <div className="navbar-center hidden lg:flex">
