@@ -16,6 +16,8 @@
     "axios": "^1.7.9",
     "date-fns": "^4.1.0",
     "firebase": "^11.1.0",
+    "flowbite": "^3.1.2",
+    "flowbite-react": "^0.10.2",
     "framer-motion": "^12.4.7",
     "localforage": "^1.10.0",
     "match-sorter": "^8.0.0",
